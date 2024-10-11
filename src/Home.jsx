@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     axios
       .get(
-        "https://newsapi.org/v2/everything?q=apple&from=2024-10-07&to=2024-10-07&sortBy=popularity&apiKey=75e3bee6d72e4225baf7f486e5d82af8"
+        "https://newsapi.org/v2/everything?q=everything&from=2024-09-11&sortBy=publishedAt&apiKey=75e3bee6d72e4225baf7f486e5d82af8"
       )
       .then((response) => {
         console.log(response.data.results);
