@@ -9,11 +9,11 @@ function Home() {
   useEffect(() => {
     axios
       .get(
-        "https://newsapi.org/v2/everything?q=everything&apiKey=75e3bee6d72e4225baf7f486e5d82af8"
+        "https://newsdata.io/api/1/news?apikey=pub_556627816202561f60501489d533c62282b18&q=news"
       )
       .then((response) => {
         console.log(response.data.results);
-        setNews(response.data.articles);
+        setNews(response.data.results);
       });
   }, []);
   const txtHandler = (e) => {
@@ -44,7 +44,7 @@ function Home() {
             <div className="bg-white shadow-lg shadow-black/50 p-3 rounded-md size-[350px] overflow-hidden overflow-y-scroll my-2">
               {e.urlToImage !== "" && (
                 <div className="h-[35%] flex justify-center">
-                  <img src={e.urlToImage} className="h-full" />
+                  <img src={e.source_icon} className="h-full" />
                 </div>
               )}
 
